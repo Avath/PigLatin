@@ -1,12 +1,26 @@
 import java.util.*;
 
 public void setup() {
-	String lines[] = loadStrings("words.txt");
+	String lines[] = loadStrings("LowellHymn.txt");
+
 	System.out.println("there are " + lines.length + " lines");
-	for (int i = 0 ; i < lines.length; i++) {
-	  System.out.println(pigLatin(lines[i]));
+
+	for(int i=0; i<lines.length;i++){
+		for(int j=0;j<lines[].length();j++){
+
+			
+
+
+		}
+
 	}
-}
+
+
+		
+	for (int i = 0 ; i < lines.length; i++) {
+	  System.out.println(lines[i]);
+	}
+
 public void draw()
 {
 }
@@ -16,7 +30,7 @@ for(int i=0; i<sWord.length();i++){
       return i;
     }
       
-  }
+  }     
 
 	return -1;
 }
@@ -24,26 +38,27 @@ for(int i=0; i<sWord.length();i++){
 public String pigLatin(String sWord)
 
 {
+	String t=new String();
+
 	if(findFirstVowel(sWord) == -1)
 	{
-		return sWord + "ay";
+		t= sWord + "ay";
 	}
 	else if(findFirstVowel(sWord)==0)
 	 {
 
-	 	return sWord+"way";
+	 	t= sWord+"way";
 	}
 	else{
-	for(int i=0; i<sWord.length();i++){
-    if(sWord.substring(i,i+2).equals("qu")){
-      return sWord.substring(2,sWord.length())+"quway";  
+	
+    if(sWord.substring(0,2).equals("qu")){
+      t= sWord.substring(2)+"quway";  
     }
     else {
-		return sWord.substring(1)+sWord.substring(0,1)+"ay";
+		t= sWord.substring(1)+sWord.substring(0,1)+"ay";
     }
       
-  }
+  
 } 
-
-
+return t;
 }
