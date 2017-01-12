@@ -6,10 +6,12 @@ public void setup() {
 	System.out.println("there are " + lines.length + " lines");
 
 	for(int i=0; i<lines.length;i++){
-		for(int j=0;j<lines[].length();j++){
+		for(int j=0;j<lines[i].length();j++){
+ 			
+			if(lines[i].substring(j,j+1).equals(" ")==true);
 
-			
-
+			int e=j;
+			System.out.println(pigLatin(lines[i].substring(e,j)));
 
 		}
 
@@ -17,10 +19,8 @@ public void setup() {
 
 
 		
-	for (int i = 0 ; i < lines.length; i++) {
-	  System.out.println(lines[i]);
-	}
-
+	
+}
 public void draw()
 {
 }
