@@ -1,22 +1,17 @@
 import java.util.*;
-
+ArrayList <Integer> e= new ArrayList <Integer>();
 public void setup() {
-	String lines[] = loadStrings("LowellHymn.txt");
+	String lines[] = loadStrings("words.txt");
 
 	System.out.println("there are " + lines.length + " lines");
 
 	for(int i=0; i<lines.length;i++){
-		for(int j=0;j<lines[i].length();j++){
- 			
-			if(lines[i].substring(j,j+1).equals(" ")==true);
+		
+			System.out.println(pigLatin(lines[i]));
+			
 
-			int e=j;
-			System.out.println(pigLatin(lines[i].substring(e,j)));
-
-		}
-
-	}
-
+}
+	
 
 		
 	
